@@ -22,6 +22,24 @@ typedef struct struct_GPIO	{
 	} struct_GPIO;
 	
 	/* начало определения всех возможных GPIO*/
+	struct_GPIO B0 = {
+		.DDR = &DDRB,
+		.PORT = &PORTB,
+		.pinNumber = 0b00000001
+	};
+	
+	struct_GPIO B1 = {
+		.DDR = &DDRB,
+		.PORT = &PORTB,
+		.pinNumber = 0b00000010
+	};
+	
+	struct_GPIO B2 = {
+		.DDR = &DDRB,
+		.PORT = &PORTB,
+		.pinNumber = 0b00000100
+	};
+	
 	struct_GPIO B3 = {
 		.DDR = &DDRB,
 		.PORT = &PORTB,
