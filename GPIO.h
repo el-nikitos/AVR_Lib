@@ -22,6 +22,24 @@ typedef struct struct_GPIO	{
 	} struct_GPIO;
 	
 	/* начало определения всех возможных GPIO*/
+	struct_GPIO B0 = {
+		.DDR = &DDRB,
+		.PORT = &PORTB,
+		.pinNumber = 0b00000001
+	};
+	
+	struct_GPIO B1 = {
+		.DDR = &DDRB,
+		.PORT = &PORTB,
+		.pinNumber = 0b00000010
+	};
+	
+	struct_GPIO B2 = {
+		.DDR = &DDRB,
+		.PORT = &PORTB,
+		.pinNumber = 0b00000100
+	};
+	
 	struct_GPIO B3 = {
 		.DDR = &DDRB,
 		.PORT = &PORTB,
@@ -32,6 +50,18 @@ typedef struct struct_GPIO	{
 		.DDR = &DDRB,
 		.PORT = &PORTB,
 		.pinNumber = 0b00010000
+	};
+	
+	struct_GPIO B6 = {
+		.DDR = &DDRB,
+		.PORT = &PORTB,
+		.pinNumber = 0b01000000
+	};
+	
+	struct_GPIO B7 = {
+		.DDR = &DDRB,
+		.PORT = &PORTB,
+		.pinNumber = 0b10000000
 	};
 	
 	struct_GPIO C0 = {
@@ -69,6 +99,12 @@ typedef struct struct_GPIO	{
 		.PORT = &PORTC,
 		.pinNumber = 0b00100000
 	};
+	
+	struct_GPIO D2 = {
+		.DDR = &DDRD,
+		.PORT = &PORTD,
+		.pinNumber = 0b00000100
+	};
 		
 	struct_GPIO D3 = {
 		.DDR = &DDRD,
@@ -80,6 +116,24 @@ typedef struct struct_GPIO	{
 		.DDR = &DDRD,
 		.PORT = &PORTD,
 		.pinNumber = 0b00010000
+	};
+	
+	struct_GPIO D5 = {
+		.DDR = &DDRD,
+		.PORT = &PORTD,
+		.pinNumber = 0b00100000
+	};
+	
+	struct_GPIO D6 = {
+		.DDR = &DDRD,
+		.PORT = &PORTD,
+		.pinNumber = 0b01000000
+	};
+	
+	struct_GPIO D7 = {
+		.DDR = &DDRD,
+		.PORT = &PORTD,
+		.pinNumber = 0b10000000
 	};
 	/* конец определения всех возможных GPIO*/
 
