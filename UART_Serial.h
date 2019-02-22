@@ -24,3 +24,5 @@ void UART_open(unsigned char ubrr)	{
 	 
 	 UDR = data;
  }
+ 
+ 
