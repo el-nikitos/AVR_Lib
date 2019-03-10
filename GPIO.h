@@ -18,6 +18,7 @@ typedef enum enumLevel	{
 typedef struct struct_GPIO	{
 	byte *DDR;
 	byte *PORT;
+	byte *PIN;
 	byte pinNumber;
 	} struct_GPIO;
 	
@@ -100,6 +101,18 @@ typedef struct struct_GPIO	{
 		.pinNumber = 0b00100000
 	};
 	
+	struct_GPIO D0 = {
+		.DDR = &DDRD,
+		.PORT = &PORTD,
+		.pinNumber = 0b00000010
+	};
+	
+	struct_GPIO D1 = {
+		.DDR = &DDRD,
+		.PORT = &PORTD,
+		.pinNumber = 0b00000010
+	};
+	
 	struct_GPIO D2 = {
 		.DDR = &DDRD,
 		.PORT = &PORTD,
@@ -109,6 +122,7 @@ typedef struct struct_GPIO	{
 	struct_GPIO D3 = {
 		.DDR = &DDRD,
 		.PORT = &PORTD,
+		.PIN = &PIND,
 		.pinNumber = 0b00001000
 	};
 	
@@ -172,3 +186,25 @@ struct_GPIO struct_GPIO_changeName(struct_GPIO from_A)	{
 	
 	return bufer_GPIO;
 	};
+
+byte sensor_button_check(struct_GPIO GPIO_IN, struct_GPIO GPIO_OUT, int check_repeat, int check_limit)	{
+	int check_count = 0;
+
+	for (int i = 0; i<check_repeat; i++)  {
+		pinMode(GPIO_OUT, OUTPUT);
+		digitalWrite(GPIO_OUT, LOW);	// BUT_COM_OUT -> в низком уровне
+		pinMode(GPIO_IN, OUTPUT);	// BUT_1_IN -> сконфигурирован на выход
+		digitalWrite(GPIO_IN, LOW);	// BUT_1_IN -> в низком уровне
+		pinMode(GPIO_IN, INPUT);		// BUT_1_IN -> сконфигурирован на вход
+		
+		digitalWrite(GPIO_OUT, HIGH);	// BUT_COM_OUT -> в высоков уровне
+		while ( (*GPIO_OUT.PIN & (GPIO_OUT.pinNumber) )==0 )  {
+			check_count++;
+		}
+	}
+	if (check_count > check_limit) {
+		return 1;
+		} else  {
+		return 0;
+	}
+}
