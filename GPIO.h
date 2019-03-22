@@ -58,6 +58,13 @@ typedef struct struct_GPIO	{
 		.pinNumber = 0b00010000
 	};
 	
+	struct_GPIO B5 = {
+		.DDR = &DDRB,
+		.PORT = &PORTB,
+		.STATUS = &PINB,
+		.pinNumber = 0b00100000
+	};
+	
 	struct_GPIO B6 = {
 		.DDR = &DDRB,
 		.PORT = &PORTB,
