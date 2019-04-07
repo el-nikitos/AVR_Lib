@@ -1,21 +1,43 @@
 #############################################################
 
-atmega8_mad.name=El-Nikitos MAD 8MHz int
+atmega8_8int.name=El-Nikitos MAD 8MHz int
 
-atmega8_mad.bootloader.tool=avrdude
-atmega8_mad.bootloader.low_fuses=0xE4
-atmega8_mad.bootloader.high_fuses=0xCF
-atmega8_mad.bootloader.unlock_bits=0x3F
-atmega8_mad.bootloader.lock_bits=0x0F
-atmega8_mad.bootloader.file=blink_PB2.hex
+atmega8_8int.bootloader.tool=avrdude
+atmega8_8int.bootloader.low_fuses=0xE4
+atmega8_8int.bootloader.high_fuses=0xCF
+atmega8_8int.bootloader.unlock_bits=0x3F
+atmega8_8int.bootloader.lock_bits=0x0F
+atmega8_8int.bootloader.file=blink_PB2.hex
 
-atmega8_mad.build.f_cpu=8000000L
-atmega8_mad.build.mcu=atmegang
-atmega8_mad.build.board=AVR_NG
-atmega8_mad.build.mcu=atmega8
-atmega8_mad.build.core=arduino:arduino
-atmega8_mad.build.variant=standard
+atmega8_8int.build.f_cpu=8000000L
+atmega8_8int.build.mcu=atmegang
+atmega8_8int.build.board=AVR_NG
+atmega8_8int.build.mcu=atmega8
+atmega8_8int.build.core=arduino:arduino
+atmega8_8int.build.variant=standard
 
-atmega8_mad.upload.tool=avrdude
-atmega8_mad.upload.maximum_size=7168
-atmega8_mad.upload.maximum_data_size=1024
+atmega8_8int.upload.tool=avrdude
+atmega8_8int.upload.maximum_size=7168
+atmega8_8int.upload.maximum_data_size=1024
+
+#############################################################
+
+atmega8_16ext.name=El-Nikitos MAD 16MHz ext
+
+atmega8_16ext.bootloader.tool=avrdude
+atmega8_16ext.bootloader.low_fuses=0xFF
+atmega8_16ext.bootloader.high_fuses=0xCF
+atmega8_16ext.bootloader.unlock_bits=0x3F
+atmega8_16ext.bootloader.lock_bits=0x0F
+atmega8_16ext.bootloader.file=blink_PB2.hex
+
+atmega8_16ext.build.f_cpu=16000000L
+atmega8_16ext.build.mcu=atmegang
+atmega8_16ext.build.board=AVR_NG
+atmega8_16ext.build.mcu=atmega8
+atmega8_16ext.build.core=arduino:arduino
+atmega8_16ext.build.variant=standard
+
+atmega8_16ext.upload.tool=avrdude
+atmega8_16ext.upload.maximum_size=7168
+atmega8_16ext.upload.maximum_data_size=1024
