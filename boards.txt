@@ -22,6 +22,28 @@ atmega8_8int.upload.maximum_data_size=1024
 
 #############################################################
 
+atmega8_16ext.name=El-Nikitos MAD 8MHz ext
+
+atmega8_8ext.bootloader.tool=avrdude
+atmega8_8ext.bootloader.low_fuses=0xFF
+atmega8_8ext.bootloader.high_fuses=0xCF
+atmega8_8ext.bootloader.unlock_bits=0x3F
+atmega8_8ext.bootloader.lock_bits=0x0F
+atmega8_8ext.bootloader.file=blink_PB2.hex
+
+atmega8_8ext.build.f_cpu=8000000L
+atmega8_8ext.build.mcu=atmegang
+atmega8_8ext.build.board=AVR_NG
+atmega8_8ext.build.mcu=atmega8
+atmega8_8ext.build.core=arduino:arduino
+atmega8_8ext.build.variant=standard
+
+atmega8_8ext.upload.tool=avrdude
+atmega8_8ext.upload.maximum_size=7168
+atmega8_8ext.upload.maximum_data_size=1024
+
+#############################################################
+
 atmega8_16ext.name=El-Nikitos MAD 16MHz ext
 
 atmega8_16ext.bootloader.tool=avrdude
