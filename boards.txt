@@ -1,6 +1,6 @@
 #############################################################
 
-atmega8_8int.name=El-Nikitos MAD 8MHz int
+atmega8_8int.name=El-Nikitos AtMega8 8MHz int
 
 atmega8_8int.bootloader.tool=avrdude
 atmega8_8int.bootloader.low_fuses=0xE4
@@ -22,7 +22,7 @@ atmega8_8int.upload.maximum_data_size=1024
 
 #############################################################
 
-atmega8_16ext.name=El-Nikitos MAD 8MHz ext
+atmega8_8ext.name=El-Nikitos AtMega8 8MHz ext
 
 atmega8_8ext.bootloader.tool=avrdude
 atmega8_8ext.bootloader.low_fuses=0xFF
@@ -42,9 +42,10 @@ atmega8_8ext.upload.tool=avrdude
 atmega8_8ext.upload.maximum_size=7168
 atmega8_8ext.upload.maximum_data_size=1024
 
+
 #############################################################
 
-atmega8_16ext.name=El-Nikitos MAD 16MHz ext
+atmega8_16ext.name=El-Nikitos AtMega8 16MHz ext
 
 atmega8_16ext.bootloader.tool=avrdude
 atmega8_16ext.bootloader.low_fuses=0xFF
